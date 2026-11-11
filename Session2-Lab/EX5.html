@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="EX5.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <h2 class="logo">MyDash</h2>
+      <nav>
+        <a href="#" class="active">Overview</a>
+        <a href="#">Orders</a>
+        <a href="#">Customers</a>
+        <a href="#">Settings</a>
+      </nav>
+    </aside>
+    <header class="topbar">
+      <h1>Overview</h1>
+      <div class="user">Hello, Sam</div>
+    </header>
+    <main class="content">
+      <section class="stats">
+        <div class="stat">
+          <p class="label">Total sales</p>
+          <p class="value">$12,480</p>
+        </div>
+        <div class="stat">
+          <p class="label">Orders</p>
+          <p class="value">320</p>
+        </div>
+        <div class="stat">
+          <p class="label">Customers</p>
+          <p class="value">1,204</p>
+        </div>
+        <div class="stat">
+          <p class="label">Refunds</p>
+          <p class="value">8</p>
+        </div>
+      </section>
+      <section class="panel">
+        <h2>Recent orders</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Order</th>
+              <th>Customer</th>
+              <th>Total</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>#1001</td>
+              <td>Anna Lee</td>
+              <td>$48</td>
+              <td><span class="badge done">Paid</span></td>
+            </tr>
+            <tr>
+              <td>#1002</td>
+              <td>Ben Carter</td>
+              <td>$120</td>
+              <td><span class="badge wait">Pending</span></td>
+            </tr>
+            <tr>
+              <td>#1003</td>
+              <td>Chea Dara</td>
+              <td>$36</td>
+              <td><span class="badge done">Paid</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,141 @@
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    background: #f1f4f9;
+    color: #1b2430;
+    font: 16px/1.5 system-ui, sans-serif;
+}
+.layout {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    grid-template-rows: 64px 1fr;
+    grid-template-areas:
+    "sidebar topbar"
+    "sidebar content";
+    min-height: 100vh;
+}
+.sidebar { 
+    grid-area: sidebar; 
+}
+.topbar  { 
+    grid-area: topbar; 
+}
+.content { 
+    grid-area: content; 
+}
+.sidebar {
+    background: #1b2430;
+    color: #fff;
+    padding: 20px;
+}
+.logo { 
+    margin: 0 0 24px; 
+    font-size: 1.3rem; 
+}
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.sidebar a {
+    padding: 8px 12px;
+    border-radius: 6px;
+    color: #b8c2d0;
+    text-decoration: none;
+}
+.sidebar a:hover  { 
+    background: #2a3544; 
+    color: #fff; 
+}
+.sidebar a.active { 
+    background: #2748c9; 
+    color: #fff; 
+}
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    background: #fff;
+    border-bottom: 1px solid #dde3ec;
+}
+.topbar h1 { 
+    margin: 0; 
+    font-size: 1.3rem; 
+}
+.content { 
+    padding: 24px; 
+}
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+}
+.stat {
+    background: #fff;
+    border: 1px solid #dde3ec;
+    border-radius: 10px;
+    padding: 16px;
+}
+.label { 
+    margin: 0; color: #5d6b7c; 
+    font-size: .875rem; 
+}
+.value { 
+    margin: 4px 0 0; 
+    font-size: 1.6rem; 
+    font-weight: 700; 
+}
+.panel {
+  background: #fff;
+  border: 1px solid #dde3ec;
+  border-radius: 10px;
+  padding: 16px;
+  overflow-x: auto;
+}
+.panel h2 { 
+    margin: 0 0 12px; 
+    font-size: 1.1rem; 
+}
+table { 
+    width: 100%; 
+    border-collapse: collapse; 
+}
+th, 
+td { 
+    padding: 10px 8px; 
+    text-align: left; 
+}
+th { 
+    color: #5d6b7c; 
+    font-size: .875rem; 
+    border-bottom: 1px solid #dde3ec; 
+}
+td { 
+    border-bottom: 1px solid #eef1f6; 
+}
+.badge {
+    padding: 2px 10px;
+    border-radius: 999px;
+    font-size: .8rem;
+}
+.done { 
+    background: #d9f3e6; 
+    color: #17653f; 
+}
+.wait { 
+    background: #fdecc8; 
+    color: #8a5a00; 
+}
+@media (max-width: 720px) {
+    .layout {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 64px 1fr;
+        grid-template-areas:
+        "sidebar"
+        "topbar"
+        "content";
+  }
+    .sidebar nav { flex-direction: row; flex-wrap: wrap; }
+}

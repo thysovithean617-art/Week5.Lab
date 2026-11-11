@@ -1,0 +1,8 @@
+.container{
+    display: flex;
+    margin: 20px;
+    padding: 10px;
+}
+.box1{
+    background-color: rgb(7, 7, 69);
+}
